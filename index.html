@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Beauty Clinic & AIB - Bonapriso, Douala</title>
+<style>
+  .carte-produit { display: inline-block; background-color: white; padding: 15px; margin: 10px; width: 280px; vertical-align: top; border-radius: 12px; border: 1px solid #ffd6e7; }
+  .carte-formation { display: inline-block; background-color: white; padding: 15px; margin: 10px; width: 280px; vertical-align: top; border-radius: 12px; }
+  .photo-produit { width: 100%; height: auto; max-height: 420px; object-fit: contain; display: block; background: #fff; }
+  .photo-formation { width: 90%; max-width: 600px; height: auto; object-fit: contain; }
+  .bouton { display: inline-block; padding: 12px 25px; font-size: 18px; text-decoration: none; border-radius: 25px; }
+  .carte-avis { background: white; padding: 15px; margin: 10px auto; max-width: 600px; border-radius: 12px; border: 1px solid #ffd6e7; text-align: left; }
+  .carte-avis b { color: #ff1493; }
+  .whatsapp-float { position: fixed; bottom: 20px; right: 18px; z-index: 999; background: #25D366; color: white; text-decoration: none; width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+  .whatsapp-label { position: fixed; bottom: 28px; right: 88px; z-index: 999; background: white; color: #222; font-size: 13px; font-weight: bold; padding: 7px 12px; border-radius: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+  @media (max-width: 600px) {
+    .carte-produit { display: block; width: 90%; margin: 10px auto; }
+    .carte-formation { display: block; width: 90%; margin: 10px auto; }
+    .photo-produit { width: 100%; }
+    .photo-formation { width: 100%; }
+    .bouton { display: block; width: 90%; margin: 10px auto; text-align: center; }
+    h1 { font-size: 28px !important; }
+    .whatsapp-label { display: none; }
+  }
+</style>
+</head>
+<body style="background-color: #fff0f5; text-align: center; font-family: Arial; margin: 0;">
+
+<!-- MENU -->
+<div style="background-color: #ff1493; padding: 15px; position: sticky; top: 0; z-index: 99;">
+  <a href="#accueil" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Accueil</a>
+  <a href="#produits" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Produits</a>
+  <a href="#services" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Services</a>
+  <a href="#formations" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Formations AIB</a>
+  <a href="#avis" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Avis Clients</a>
+  <a href="#tiktok" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">TikTok</a>
+  <a href="#contact" style="color: white; margin: 10px; font-size: 18px; text-decoration: none;">Contact</a>
+  <br><br>
+  <span id="panierTexte" style="background-color: white; color: #ff1493; padding: 5px 10px; border-radius: 20px; font-weight: bold;">Panier : 0 produit</span>
+</div>
+
+<!-- ACCUEIL -->
+<div id="accueil" style="padding: 20px;">
+  <h1 style="color: #ff1493; font-size: 35px;">EXCEL BEAUTY CLINIC</h1>
+  <p style="font-size: 20px;">Boutique & Académie Internationale de Beauté (AIB)<br>Bonapriso - Bonadiwoto, Douala</p>
+  <p style="font-size: 18px;">Produits : WhatsApp 675 13 60 36 | Formations : WhatsApp 6 80 88 53 40</p>
+  <a href="#produits" class="bouton" style="background-color: #ff1493; color: white;">Voir les Produits</a>
+  <a href="#formations" class="bouton" style="background-color: black; color: white;">Voir les Formations AIB</a>
+</div>
+
+<!-- QUI SOMMES NOUS -->
+<div style="background-color: white; padding: 20px; margin: 10px; border-radius: 12px;">
+  <h2>Qui sommes-nous ?</h2>
+  <p style="font-size: 18px;">Excel Beauty Clinic est une boutique de cosmétiques à Bonapriso, Douala.<br>Et nous sommes aussi l'Académie Internationale de Beauté (AIB) à Bonadiwoto.<br>Nous ne vendons pas seulement des produits. Nous formons aussi les futures expertes de la beauté.<br><b>Apprendre - Pratiquer - Maîtriser - Entreprendre</b></p>
+  <p style="font-size: 16px; margin-top:10px;">📍 Bonapriso, Douala - Cameroun<br>🕐 Lundi - Samedi | 8h00 - 19h00<br>📦 Livraison Partout - Douala et à l'extérieur de Douala - Paiement à la livraison</p>
+</div>
+
+<!-- PRODUITS - 9 PRODUITS -->
+<h2 id="produits">Nos Produits - Choisis et mets dans ton panier</h2>
+
+<div class="carte-produit">
+  <h3>Lait Corps Éclat d'Or - Dr John's</h3>
+  <img src="p1.jpg" class="photo-produit">
+  <p>Donne 2 à 3 teintes de plus - Élimine les taches noires - 300ml</p>
+  <p style="color: red; font-size: 20px;"><b>20 000 FCFA</b></p>
+  <button onclick="ajouter(1)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Lait Corps Platinium - Dr John's</h3>
+  <img src="p2.jpg" class="photo-produit">
+  <p>Donne 1 à 2 teintes de plus - Élimine les taches noires - 300ml</p>
+  <p style="color: red; font-size: 20px;"><b>20 000 FCFA</b></p>
+  <button onclick="ajouter(2)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Crème Visage Platinium - Dr John's</h3>
+  <img src="p3.jpg" class="photo-produit">
+  <p>Rend le visage lisse et éclatant - Ajoute 1 à 2 teintes - 50g</p>
+  <p style="color: red; font-size: 20px;"><b>10 000 FCFA</b></p>
+  <button onclick="ajouter(3)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Crème Visage Éclat d'Or - Dr John's</h3>
+  <img src="p4.jpg" class="photo-produit">
+  <p>Rend le visage lisse et éclatant - Ajoute 2 à 3 teintes - 50g</p>
+  <p style="color: red; font-size: 20px;"><b>10 000 FCFA</b></p>
+  <button onclick="ajouter(4)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Lotion Tonique Équilibrante</h3>
+  <img src="p5.jpg" class="photo-produit">
+  <p>Resserre les pores - Rend le visage lisse - Pour tout type de peau - 100ml</p>
+  <p style="color: red; font-size: 20px;"><b>5 000 FCFA</b></p>
+  <button onclick="ajouter(5)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Spray Écran Solaire UVA-UVB</h3>
+  <img src="p6.jpg" class="photo-produit">
+  <p>Protège du soleil - Prévient le vieillissement - Lutte contre rides et taches - 100ml</p>
+  <p style="color: red; font-size: 20px;"><b>5 000 FCFA</b></p>
+  <button onclick="ajouter(6)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Savon Platinium - Aux pépites d'or</h3>
+  <img src="p7.jpg" class="photo-produit">
+  <p>Éclaircit sans agresser - Donne un teint éclatant - 300g</p>
+  <p style="color: red; font-size: 20px;"><b>15 000 FCFA</b></p>
+  <button onclick="ajouter(7)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Éclat d'Or 24K Gel Douche Corps</h3>
+  <img src="p8.jpg" class="photo-produit">
+  <p>Éclaircit la peau et la rend plus douce</p>
+  <p style="color: red; font-size: 20px;"><b>10 000 FCFA</b></p>
+  <button onclick="ajouter(8)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<div class="carte-produit">
+  <h3>Rapide Slim - Excel Beauty Clinic</h3>
+  <img src="p9.jpg" class="photo-produit">
+  <p>Complément alimentaire - 30 capsules - Formulé à base de plantes - Aide à gérer l'appétit</p>
+  <p style="color: red; font-size: 20px;"><b>25 000 FCFA</b></p>
+  <button onclick="ajouter(9)" style="background-color: #ff1493; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 20px;">Ajouter au Panier</button>
+</div>
+
+<br><br>
+
+<!-- PANIER -->
+<div style="background-color: white; padding: 20px; margin: 10px; border: 2px solid #ff1493; border-radius: 12px;">
+  <h2>🛒 Mon Panier</h2>
+  <div id="panierDetail" style="font-size: 18px;">Ton panier est vide pour le moment. Ajoute un produit en haut.</div>
+  <br>
+  <button onclick="commanderTout()" style="background-color: green; color: white; font-size: 20px; padding: 15px 30px; border: none; border-radius: 25px;">Commander tout mon Panier sur WhatsApp</button>
+  <button onclick="viderPanier()" style="background-color: red; color: white; font-size: 18px; padding: 15px 20px; border: none; margin-left: 10px; border-radius: 25px;">Vider le panier</button>
+</div>
+<br>
+
+<!-- SERVICES -->
+<div id="services" style="background-color: white; padding: 20px; margin: 10px; border-radius: 12px;">
+  <h2>Nos Services</h2>
+  <div style="border: 1px solid #ff1493; padding: 15px; margin: 10px; border-radius: 10px;">
+    <p style="font-size: 19px;"><b>💆‍♀️ Massages</b> - Pour détendre le corps et la peau</p>
+    <p style="color: #ff1493; font-size: 18px;"><b>Prix : Veuillez nous écrire sur WhatsApp</b></p>
+    <a href="https://wa.me/237675136036?text=Bonjour Excel Beauty Clinic, je veux connaitre le prix pour un Massage" style="background-color: #ff1493; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 20px;">Demander le prix du Massage</a>
+  </div>
+  <div style="border: 1px solid #ff1493; padding: 15px; margin: 10px; border-radius: 10px;">
+    <p style="font-size: 19px;"><b>✨ Soins de Visage</b> - Nettoyage, gommage, soin spécial acné et taches</p>
+    <p style="color: #ff1493; font-size: 18px;"><b>Prix : Veuillez nous écrire sur WhatsApp</b></p>
+    <a href="https://wa.me/237675136036?text=Bonjour Excel Beauty Clinic, je veux connaitre le prix pour un Soin de Visage" style="background-color: #ff1493; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 20px;">Demander le prix du Soin de Visage</a>
+  </div>
+  <p style="font-size: 18px;">💡 <b>Conseils Beauté Personnalisés</b></p>
+  <p style="font-size: 18px;">🚚 <b>Livraison Partout</b> - Douala et à l'extérieur de Douala</p>
+</div>
+
+<!-- FORMATIONS AIB -->
+<div id="formations" style="background-color: #fff8e1; padding: 20px; margin: 10px; border: 3px solid #b8860b; border-radius: 12px;">
+  <h2 style="color: #b8860b;">ACADÉMIE INTERNATIONALE DE BEAUTÉ (AIB)</h2>
+  <p style="font-size: 18px;"><b>Apprendre - Pratiquer - Maîtriser - Entreprendre</b></p>
+  <p style="font-size: 18px;">Formations de Spécialisation - Perfectionnez vos compétences et devenez Expert(e)</p>
+  <img src="formation.jpg" class="photo-formation">
+  <p style="font-size: 16px;">Formations pratiques, intensives et spécialisées pour vous rendre incontournable dans le monde de la beauté.</p>
+  <a href="https://www.tiktok.com/@aibcameroun" style="background-color: black; color: white; padding: 12px 25px; font-size: 17px; text-decoration: none; display: inline-block; border-radius: 25px; margin: 10px 0;">🎓 Voir le TikTok AIB - @aibcameroun</a>
+  <div class="carte-formation" style="border-top: 5px solid #b8860b;">
+    <h3>Esthétique Corrective & Techniques Avancées</h3>
+    <p>Durée : 2 MOIS</p>
+    <p>Analyse de la peau, Traitement des imperfections, Soins anti-âge, Protocoles visage, Cas pratiques</p>
+    <p style="color: red; font-size: 22px;"><b>Tarif : 400 000 F</b></p>
+    <a href="https://wa.me/237680885340?text=Bonjour AIB, je veux m'inscrire à la formation Esthétique Corrective à 400 000 F" style="background-color: #b8860b; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 20px;">S'inscrire à cette formation</a>
+  </div>
+  <div class="carte-formation" style="border-top: 5px solid #8b0000;">
+    <h3>Maquillage Professionnel & Avancé</h3>
+    <p>Perfectionnement du teint, Morpho-visagisme, Maquillage peau noire, Pratique sur modèles</p>
+    <p style="font-size: 18px;"><b>Formule 1 Mois : 200 000 F</b></p>
+    <p style="font-size: 18px;"><b>Formule 2 Mois : 250 000 F</b></p>
+    <a href="https://wa.me/237680885340?text=Bonjour AIB, je veux m'inscrire à la formation Maquillage Professionnel" style="background-color: #8b0000; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 20px;">S'inscrire à cette formation</a>
+  </div>
+  <div class="carte-formation" style="border-top: 5px solid #b8860b;">
+    <h3>Onglerie Professionnelle & Avancée</h3>
+    <p>Anatomie de l'ongle, Techniques de pose (gel, acrygel...), Extensions, Nail art, Hygiène</p>
+    <p style="font-size: 18px;"><b>Formule 1 Mois : 200 000 F</b></p>
+    <p style="font-size: 18px;"><b>Formule 2 Mois : 250 000 F</b></p>
+    <a href="https://wa.me/237680885340?text=Bonjour AIB, je veux m'inscrire à la formation Onglerie Professionnelle" style="background-color: #b8860b; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 20px;">S'inscrire à cette formation</a>
+  </div>
+  <p style="font-size: 18px;"><b>Pourquoi choisir nos spécialisations ?</b><br>Formations pratiques et intensives | Formateurs professionnels | Travail sur modèles réels | Attestation en fin de formation | Accompagnement vers l'emploi et l'entrepreneuriat</p>
+  <p style="font-size: 16px;">Adresse : Bonadiwoto, Près de l'Hôtel Grand Adamaoua, Douala - Cameroun<br>WhatsApp Formations : 6 80 88 53 40 | Site : www.formationbeaute.org | Email : contact@formationbeaute.org</p>
+</div>
+
+<!-- AVIS CLIENTS -->
+<div id="avis" style="background-color: white; padding: 20px; margin: 10px; border-radius: 12px; border: 2px solid #ff1493;">
+  <h2>⭐ Ce que nos clientes disent</h2>
+  <p style="font-size: 16px; color: #666;">Plus de 100 clientes satisfaites à Douala et partout au Cameroun</p>
+  <div id="listeAvis"></div>
+  <div style="background: #fff0f5; padding: 18px; border-radius: 12px; max-width: 600px; margin: 20px auto 0; text-align: left;">
+    <h3 style="text-align:center; color: #ff1493;">💬 Donne aussi ton avis</h3>
+    <p style="font-size: 14px; text-align:center;">Tu as déjà acheté chez nous ? Dis-nous ce que tu en penses, ça aide les autres clientes.</p>
+    <label style="font-size:14px;"><b>Ton nom :</b></label><br>
+    <input type="text" id="avisNom" placeholder="Ex : Aïcha" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; margin: 6px 0 12px;"><br>
+    <label style="font-size:14px;"><b>Quel produit / formation ?</b></label><br>
+    <select id="avisProduit" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; margin: 6px 0 12px;">
+      <option>Lait Corps Éclat d'Or - Dr John's</option>
+      <option>Lait Corps Platinium - Dr John's</option>
+      <option>Crème Visage Platinium - Dr John's</option>
+      <option>Crème Visage Éclat d'Or - Dr John's</option>
+      <option>Lotion Tonique Équilibrante</option>
+      <option>Spray Écran Solaire UVA-UVB</option>
+      <option>Savon Platinium - Aux pépites d'or</option>
+      <option>Éclat d'Or 24K Gel Douche Corps</option>
+      <option>Rapide Slim - Excel Beauty Clinic</option>
+      <option>Formation AIB - Esthétique / Maquillage / Onglerie</option>
+      <option>Service - Massage / Soin de Visage</option>
+    </select><br>
+    <label style="font-size:14px;"><b>Ton avis :</b></label><br>
+    <textarea id="avisTexte" rows="3" placeholder="Ex : J'ai adoré, en 2 semaines mon teint est plus clair..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; margin: 6px 0 12px; font-family: Arial;"></textarea><br>
+    <button onclick="publierAvis()" style="background-color: #ff1493; color: white; border: none; padding: 13px 20px; border-radius: 25px; font-weight: bold; width: 100%; font-size: 16px;">Publier mon avis ⭐</button>
+  </div>
+</div>
+
+<!-- TIKTOK - 2 COMPTES SEPARES -->
+<div id="tiktok" style="padding: 20px; margin: 10px; border-radius: 12px;">
+  <h2>🎥 Nos TikTok - Suivez-nous</h2>
+  <div style="background-color: black; color: white; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+    <h3 style="margin:0;">💄 TikTok Excel Beauty Clinic - Boutique</h3>
+    <p style="font-size: 17px;">Pour les produits, les soins, les conseils beauté</p>
+    <p style="font-size: 17px;">✅ Comment lutter contre l'acné ✅ Comment enlever les taches noires ✅ Quels produits choisir</p>
+    <a href="https://www.tiktok.com/search?q=Excel%20Beauty%20Clinic" style="background-color: white; color: black; padding: 12px 25px; font-size: 17px; text-decoration: none; display: inline-block; border-radius: 25px;">Voir TikTok Excel Beauty Clinic</a>
+  </div>
+  <div style="background-color: #fff8e1; color: #333; padding: 20px; border-radius: 12px; border: 3px solid #b8860b;">
+    <h3 style="margin:0; color: #b8860b;">🎓 TikTok AIB - Formations</h3>
+    <p style="font-size: 17px;"><b>@aibcameroun</b> - Pour les formations, les élèves en pratique</p>
+    <p style="font-size: 17px;">✅ Maquillage sur modèles ✅ Onglerie en pratique ✅ Esthétique corrective ✅ Vie de l'académie</p>
+    <a href="https://www.tiktok.com/@aibcameroun" style="background-color: black; color: white; padding: 12px 25px; font-size: 17px; text-decoration: none; display: inline-block; border-radius: 25px;">Voir TikTok AIB - @aibcameroun</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" style="padding: 20px; padding-bottom: 90px;">
+  <h2>Contact</h2>
+  <p style="font-size: 18px;">Boutique Excel Beauty Clinic : Bonapriso, Douala - WhatsApp : 675 13 60 36</p>
+  <p style="font-size: 18px;">Académie AIB Formations : Bonadiwoto, Douala - WhatsApp : 6 80 88 53 40</p>
+  <a href="https://wa.me/237675136036" class="bouton" style="background-color: green; color: white;">Discuter Boutique sur WhatsApp</a>
+  <a href="https://wa.me/237680885340" class="bouton" style="background-color: #b8860b; color: white;">Discuter Formations sur WhatsApp</a>
+</div>
+
+<!-- BOUTON WHATSAPP FLOTTANT -->
+<div class="whatsapp-label">💬 Commande rapide</div>
+<a href="https://wa.me/237675136036?text=Bonjour Excel Beauty Clinic, je veux commander" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+  const produits = {
+    1: {nom: "Lait Corps Éclat d'Or - Dr John's", prix: 20000},
+    2: {nom: "Lait Corps Platinium - Dr John's", prix: 20000},
+    3: {nom: "Crème Visage Platinium - Dr John's", prix: 10000},
+    4: {nom: "Crème Visage Éclat d'Or - Dr John's", prix: 10000},
+    5: {nom: "Lotion Tonique Équilibrante", prix: 5000},
+    6: {nom: "Spray Écran Solaire UVA-UVB", prix: 5000},
+    7: {nom: "Savon Platinium - Aux pépites d'or", prix: 15000},
+    8: {nom: "Éclat d'Or 24K Gel Douche Corps", prix: 10000},
+    9: {nom: "Rapide Slim - Excel Beauty Clinic", prix: 25000},
+  };
+  let panier = {};
+  function ajouter(id) { panier[id] = (panier[id]||0) + 1; afficherPanier(); alert(produits[id].nom + ' ajouté au panier !'); }
+  function changerQty(id, d){ panier[id] = (panier[id]||0) + d; if(panier[id]<=0) delete panier[id]; afficherPanier(); }
+  function retirer(id) { delete panier[id]; afficherPanier(); }
+  function viderPanier() { panier = {}; afficherPanier(); alert('Panier vidé !'); }
+  function afficherPanier() {
+    let total = 0; let count = 0;
+    for(let id in panier){ total += produits[id].prix * panier[id]; count += panier[id]; }
+    document.getElementById('panierTexte').innerHTML = 'Panier : ' + count + ' produit(s) - ' + total.toLocaleString('fr-FR') + ' FCFA';
+    if(count==0){ document.getElementById('panierDetail').innerHTML = 'Ton panier est vide pour le moment. Ajoute un produit en haut.'; }
+    else {
+      let texte = '';
+      for(let id in panier){ let sous = produits[id].prix * panier[id]; texte += produits[id].nom + ' - ' + produits[id].prix.toLocaleString('fr-FR') + ' FCFA<br><button onclick="changerQty('+id+',-1)" style="background:#eee;border:none;padding:5px 12px;border-radius:50%;font-weight:bold;">-</button> <b>'+panier[id]+'</b> <button onclick="changerQty('+id+',1)" style="background:#eee;border:none;padding:5px 12px;border-radius:50%;font-weight:bold;">+</button> = '+sous.toLocaleString('fr-FR')+' FCFA <button onclick="retirer('+id+')" style="background-color:red; color:white; border:none; padding:5px 10px; border-radius:15px;">Retirer ❌</button><br><br>'; }
+      texte += '<b>Total : ' + total.toLocaleString('fr-FR') + ' FCFA</b>';
+      document.getElementById('panierDetail').innerHTML = texte;
+    }
+  }
+  function commanderTout() {
+    let count = 0; for(let id in panier) count += panier[id];
+    if(count==0){ alert('Ton panier est vide ! Ajoute un produit d abord.'); }
+    else { let total = 0; let lignes = []; for(let id in panier){ total += produits[id].prix * panier[id]; lignes.push(produits[id].nom + ' x ' + panier[id] + ' = ' + (produits[id].prix * panier[id]).toLocaleString('fr-FR') + ' FCFA'); } let message = 'Bonjour Excel Beauty Clinic, je veux commander :\n' + lignes.join('\n') + '\nTotal : ' + total.toLocaleString('fr-FR') + ' FCFA'; window.open('https://wa.me/237675136036?text=' + encodeURIComponent(message)); }
+  }
+  const avisDeBase = [
+    {nom: "Aïcha, Bonapriso", produit: "Lait Corps Éclat d'Or - Dr John's", texte: "J'ai commandé le Lait Éclat d'Or, en 2 semaines mon teint est plus clair et plus lisse. Les taches noires ont vraiment diminué. Merci Excel !"},
+    {nom: "Clarisse, Akwa", produit: "Crème Visage Platinium - Dr John's", texte: "La crème Platinium est très douce, mon visage est lisse et éclatant. Livraison rapide à Akwa, je recommande à 100%."},
+    {nom: "Mireille, Deïdo", produit: "Savon Platinium - Aux pépites d'or", texte: "Le savon ne m'agresse pas du tout la peau, il éclaircit en douceur. Je l'utilise avec le lait, le résultat est propre."},
+    {nom: "Sandra, Bonanjo", produit: "Rapide Slim - Excel Beauty Clinic", texte: "Rapide Slim m'aide beaucoup à gérer l'appétit. J'ai déjà perdu quelques kilos et je me sens plus légère. Merci pour les conseils."},
+    {nom: "Grâce, Bonadiwoto", produit: "Formation AIB - Esthétique / Maquillage / Onglerie", texte: "J'ai fait la formation AIB à Bonadiwoto, on pratique vraiment sur des modèles. Aujourd'hui je fais mes propres clientes. Apprendre - Pratiquer - Maîtriser - Entreprendre, c'est vrai !"},
+  ];
+  let avisClients = JSON.parse(localStorage.getItem('excel_avis')||'null');
+  if(!avisClients){ avisClients = avisDeBase; localStorage.setItem('excel_avis', JSON.stringify(avisClients)); }
+  function afficherAvis(){
+    let html = '';
+    for(let i=avisClients.length-1; i>=0; i--){ let a = avisClients[i]; html += '<div class="carte-avis">⭐⭐⭐⭐⭐<br><b>'+a.nom+'</b> - <span style="color:#666;font-size:13px;">'+a.produit+'</span><p style="font-size:15px;margin-top:6px;">"'+a.texte+'"</p></div>'; }
+    document.getElementById('listeAvis').innerHTML = html;
+  }
+  function publierAvis(){
+    let nom = document.getElementById('avisNom').value.trim();
+    let produit = document.getElementById('avisProduit').value;
+    let texte = document.getElementById('avisTexte').value.trim();
+    if(!nom){ alert('Écris ton nom stp'); return; }
+    if(!texte){ alert('Écris ton avis stp'); return; }
+    avisClients.push({nom: nom, produit: produit, texte: texte});
+    localStorage.setItem('excel_avis', JSON.stringify(avisClients));
+    document.getElementById('avisNom').value = '';
+    document.getElementById('avisTexte').value = '';
+    afficherAvis();
+    alert('Merci '+nom+' ! Ton avis a été publié ❤️');
+    document.getElementById('avis').scrollIntoView({behavior:'smooth'});
+  }
+  afficherPanier(); afficherAvis();
+</script>
+</body>
+</html>
